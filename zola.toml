@@ -1,16 +1,23 @@
 # The URL the site will be built for
 base_url = "https://example.com"
 
+theme = "apollo"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-[markdown]
-
-[markdown.highlighting]
-theme = "apollo"
-
 [extra]
 # Put all your custom variables here
+socials = [
+    { name = "GitHub", url = "https://github.com/mdeltano", icon = "github" },
+    { name = "LinkedIn", url = "https://linkedin.com/in/matthew-deltano/", icon = "linkedin" },
+    { name = "Email", url = "mailto:mattdeltano@gmail.com", icon = "email" },
+
+]
+menu = [
+    { name= "Projects", url = "/projects" },
+    { name = "About Me", url = "/about" },
+]
