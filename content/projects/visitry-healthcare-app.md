@@ -1,6 +1,6 @@
 +++
-title = "Visitry — On-Demand Healthcare Scheduling"
-description = "Cross-platform mobile app connecting patients and clinicians in an Uber-style healthcare model. 700+ users, live on the App Store and Google Play."
+title = "Visitry — On-Demand Healthcare Scheduling Platform"
+description = "Cross-platform mobile app and web platform connecting patients and clinicians in an Uber-style healthcare model. 700+ users, live on the App Store and Google Play."
 weight = 1
 date = 2026-05-01
 
