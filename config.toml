@@ -11,14 +11,16 @@ build_search_index = false
 
 [extra]
 # Put all your custom variables here
+
 socials = [
     { name = "GitHub", url = "https://github.com/mdeltano", icon = "github" },
     { name = "LinkedIn", url = "https://linkedin.com/in/matthew-deltano/", icon = "linkedin" },
     { name = "Email", url = "mailto:mattdeltano@gmail.com", icon = "email" },
-
 ]
+
 menu = [
     { name = "Home", url = "/" },
     { name = "Projects", url = "/projects" },
     { name = "About Me", url = "/about" },
+    { name = "Resume", url = "/Matthew_Deltano_Resume.pdf" },
 ]
