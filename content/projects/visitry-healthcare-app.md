@@ -14,7 +14,8 @@ tags = ["react-native", "nodejs", "mongodb", "aws", "swift"]
 Visitry is a cross-platform mobile healthcare scheduling application that
 connects patients and clinicians in an on-demand, "Uber-style" model. It
 launched on the Apple App Store and Google Play and currently supports
-700+ total users.
+700+ total users. It also has a web platform component that agencies and admins
+can use to schedule appointments and monitor activity.
 
 ## My role
 
@@ -47,6 +48,7 @@ In that role I:
 
 ## Outcome
 
-The app is live, the user base is growing, and I deliver regular feature
-walkthroughs and demos to non-technical stakeholders — connecting an
-evolving business need to a working technical solution each week.
+The app is live with a growing user base, and I am continuting to work
+on the next evolution of the platform, working on a more integrated 
+agency and contractor platform using more modern versions of the 
+frameworks the original app was built on.
