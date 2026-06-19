@@ -21,6 +21,6 @@ socials = [
 menu = [
     { name = "Home", url = "/" },
     { name = "Projects", url = "/projects" },
-    { name = "About Me", url = "/about" },
     { name = "Resume", url = "/Matthew_Deltano_Resume.pdf" },
+    { name = "Contact Me", url = "/contact" },
 ]

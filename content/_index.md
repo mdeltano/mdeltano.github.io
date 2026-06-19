@@ -16,10 +16,6 @@ I'm most comfortable working across the full stack — frontend, APIs,
 databases, and deployment — and I have prior experience in computational
 research, ML pipelines, and live-service backend systems.
 
-I'm currently looking for early career software development opportunities, 
+I'm currently looking for early career software development opportunities,
 and would love the opportunity to talk about how I can contribute to your
-organization!
-
-**Get in touch:** [mattdeltano@gmail.com](mailto:mattdeltano@gmail.com) ·
-[LinkedIn](https://linkedin.com/in/matthew-deltano/) ·
-[GitHub](https://github.com/mdeltano)
+organization. [**Get in touch →**](/contact)
