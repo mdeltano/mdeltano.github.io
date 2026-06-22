@@ -43,8 +43,8 @@ algorithmic flow rather than as a separate validation pass.
   manually to tractable computational runtimes.
 - **Adopted within the department** for continued use in ongoing
   research.
-- **Contributed to a peer-reviewed publication** in *Graphs and
-  Combinatorics*.
+- **Contributed to a peer-reviewed publication** in [*Graphs and
+  Combinatorics*](https://doi.org/10.1007/s00373-025-02944-3).
 - **Presented** methodology, tradeoffs, and performance results to an
   external academic audience of 5,000+ students and faculty.
 
