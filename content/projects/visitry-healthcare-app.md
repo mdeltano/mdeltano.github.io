@@ -28,7 +28,7 @@ In that role I:
   management, and production readiness.
 - Own feature delivery end-to-end on a roughly one-week cadence from
   client request to deployed functionality.
-- Contribute across the full stack — React Native frontend, Node.js
+- Contribute across the full stack, including React Native frontend, Node.js
   backend, MongoDB data layer, and AWS infrastructure.
 
 ## Notable work
