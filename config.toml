@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://mdeltano.github.io"
 
+title = "Matthew Deltano"
+description = "Backend & cloud software engineer building production applications used by real customers. Node.js, AWS, React Native, MongoDB."
+
 theme = "apollo"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -12,6 +15,8 @@ build_search_index = false
 [extra]
 # Put all your custom variables here
 
+stylesheets = ["custom.css"]
+
 socials = [
     { name = "GitHub", url = "https://github.com/mdeltano", icon = "github" },
     { name = "LinkedIn", url = "https://linkedin.com/in/matthew-deltano/", icon = "linkedin" },
@@ -21,6 +26,7 @@ socials = [
 menu = [
     { name = "Home", url = "/" },
     { name = "Projects", url = "/projects" },
+    { name = "Why I Build", url = "/why-i-build-software" },
     { name = "Resume", url = "/Matthew_Deltano_Resume.pdf" },
     { name = "Contact Me", url = "/contact" },
 ]

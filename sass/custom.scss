@@ -1,0 +1,147 @@
+/* Custom styles layered on top of the Apollo theme.
+   Compiled by Zola (compile_sass) to /custom.css and loaded via
+   config.extra.stylesheets. Uses the theme's CSS variables so it
+   tracks light/dark automatically. */
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0.5rem 0 2rem;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg-2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+
+  @media (max-width: 640px) {
+    width: 132px;
+    height: 132px;
+  }
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero-name {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 0 0 0.2rem;
+
+  /* The Apollo theme prepends "# " to every heading via h1::before.
+     That markdown flourish is fine on section headers but looks odd on
+     the hero name, so suppress it here. */
+  &::before {
+    content: none;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 2.1rem;
+  }
+}
+
+.hero-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 0.4rem;
+}
+
+.hero-tagline {
+  font-size: 1.05rem;
+  color: var(--text-1);
+  margin: 0 0 1.1rem;
+}
+
+/* ---------- Action buttons ---------- */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.55em 1.15em;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-1);
+  color: var(--text-0);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.05s ease;
+
+  &:hover {
+    background: var(--bg-2);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+
+  &:hover {
+    background: var(--primary-color);
+    filter: brightness(1.08);
+  }
+}
+
+/* ---------- Technical highlights ---------- */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  margin: 0 0 2.2rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.highlight {
+  background: var(--bg-1);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.98rem;
+  line-height: 1.4;
+
+  strong {
+    color: var(--text-0);
+  }
+}
+
+/* Let the last highlight span both columns when the count is odd,
+   so the grid stays visually balanced. */
+.highlight:last-child:nth-child(odd) {
+  @media (min-width: 641px) {
+    grid-column: 1 / -1;
+  }
+}

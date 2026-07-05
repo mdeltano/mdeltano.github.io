@@ -3,19 +3,16 @@ title = "Matthew Deltano"
 template = "home.html"
 +++
 
-I'm a software engineer and recent Florida Polytechnic University graduate
-(B.S. Computer Science, Software Engineering concentration, graduating *Summa Cum
-Laude*, 3.9 GPA, Killam Fellowship recipient).
+Hi, I'm Matthew — a software engineer building and maintaining a cloud-based
+healthcare scheduling platform used by **700+ people across mobile and web**.
 
-I currently work as a software engineering consultant at **Visitry LLC**,
-where I was the sole capstone team member invited to continue post-graduation
-on a cross-platform mobile healthcare scheduling app (React Native, Node.js,
-MongoDB, AWS) now live on the App Store and Google Play.
+I focus on backend and cloud engineering problems where performance,
+scalability, and reliability matter, working across Node.js, AWS, React Native,
+and MongoDB. My background also spans machine learning pipelines and
+computational research.
 
-I'm most comfortable working across the full stack, including frontend, APIs,
-databases, and deployment, and I have prior experience in computational
-research, ML pipelines, and live-service backend systems.
+I'm currently seeking a full-time Software Engineer role, and I'm always glad to
+connect with engineers, hiring managers, and mentors. [**Get in touch →**](/contact)
 
-I'm currently looking for early career software development opportunities,
-and would love the opportunity to talk about how I can contribute to your
-organization. [**Get in touch →**](/contact)
+Off the clock, I graduated from Florida Polytechnic University *Summa Cum Laude*
+(B.S. Computer Science, 3.9 GPA, Killam Fellowship recipient).

@@ -20,7 +20,7 @@ can use to schedule appointments and monitor activity.
 ## My role
 
 I was the sole member of my Florida Polytechnic capstone team invited to
-continue post-graduation as a contract software engineering consultant.
+continue post-graduation as a contract software engineer.
 In that role I:
 
 - Lead and coordinate a five-person technical team, serving as the

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;mdeltano.github.io" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Minecraft Server Plugins — Economy &amp; Warfare Systems
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Minecraft Server Plugins — Economy &amp; Warfare Systems" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Custom Java plugins for a public Minecraft server with 100+ active users. Built a dynamic in-game economy with demand-based pricing and stabilized an existing nation warfare system." />
+        
+    
+
+    
+        
+            <meta name="description" content="Custom Java plugins for a public Minecraft server with 100+ active users. Built a dynamic in-game economy with demand-based pricing and stabilized an existing nation warfare system." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://mdeltano.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://mdeltano.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://mdeltano.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://mdeltano.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://mdeltano.github.io/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://mdeltano.github.io/custom.css" />
+        
+    
+
+    
+</head>
+
+
+    <body>
+        
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;mdeltano.github.io>Matthew Deltano</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;mdeltano" class="social">
+                    <img alt="GitHub"
+                         src="https://mdeltano.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;matthew-deltano&#x2F;" class="social">
+                    <img alt="LinkedIn"
+                         src="https://mdeltano.github.io/icons/social/linkedin.svg" />
+                </a>
+            
+                <a rel='me' href="mailto:mattdeltano@gmail.com" class="social">
+                    <img alt="Email"
+                         src="https://mdeltano.github.io/icons/social/email.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://mdeltano.github.io style="margin-right: 0.5em">Home</a>
+        
+            <a href=https://mdeltano.github.io/projects style="margin-right: 0.5em">Projects</a>
+        
+            <a href=https://mdeltano.github.io/why-i-build-software style="margin-right: 0.5em">Why I Build</a>
+        
+            <a href=https://mdeltano.github.io/Matthew_Deltano_Resume.pdf style="margin-right: 0.5em">Resume</a>
+        
+            <a href=https://mdeltano.github.io/contact style="margin-right: 0.5em">Contact Me</a>
+        
+
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://mdeltano.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://mdeltano.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Minecraft Server Plugins — Economy &amp; Warfare Systems
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2026-03-01</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <h2 id="overview">Overview</h2>
+<p>Custom Java plugins for a public Minecraft server supporting 100+
+active users, extending core gameplay systems while maintaining server
+stability under live load.</p>
+<h2 id="what-i-built">What I built</h2>
+<ul>
+<li><strong>Dynamic economy system.</strong> A full virtual currency with dynamic
+pricing logic, inter-town trading, and demand-based price
+adjustments — items respond to actual player behavior, not a static
+price list.</li>
+<li><strong>Nation warfare system.</strong> Took over an existing land-and-resource
+warfare system, fixed long-standing bugs, and integrated it with the
+new economy mechanics so territorial conflict had real economic
+consequences.</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>Plugins are built on the <strong>Paper API</strong> using an event-driven design:
+event listeners, structured configuration files, and GUI-driven
+interactions for modularity and extensibility. Data persistence and
+error handling protect player state across restarts and unexpected
+failures.</p>
+<p>Performance-sensitive areas (high-frequency event handling) were
+identified and optimized to maintain acceptable TPS under load — live
+players will notice a 50ms hiccup, so anything in the tick loop got
+scrutinized.</p>
+<h2 id="operations">Operations</h2>
+<ul>
+<li>Maintained compatibility with evolving Minecraft server versions,
+updating plugin logic to accommodate API changes.</li>
+<li>Managed source control independently on GitHub with structured
+commits and versioned releases.</li>
+<li>Earlier, I administered the same kind of server end-to-end (Spigot
+on BisectHosting) for a nonprofit serving 20+ concurrent youth users
+with Type 1 Diabetes during COVID — moderation, backups, access
+control, and live incident response.</li>
+</ul>
+<p>I'm comfortable walking through plugin architecture, system
+interactions, and design tradeoffs (extensibility vs. complexity,
+performance vs. feature richness) in detail.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+        
+    </body>
+
+</html>

@@ -3,9 +3,37 @@
 
 {% block main_content %}
     <main>
+        {% set headshot = resize_image(path="static/img/headshot.png", width=320, height=320, op="fill", format="webp", quality=85) %}
+        <section class="hero">
+            <img class="hero-photo"
+                 src="{{ headshot.url }}"
+                 width="160" height="160"
+                 alt="Matthew Deltano" />
+            <div class="hero-text">
+                <h1 class="hero-name">Matthew Deltano</h1>
+                <p class="hero-title">Backend &amp; Cloud Software Engineer</p>
+                <p class="hero-tagline">
+                    Building production software that solves real-world problems.
+                </p>
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="/Matthew_Deltano_Resume.pdf">Resume</a>
+                    <a class="btn" rel="me noopener" target="_blank" href="https://github.com/mdeltano">GitHub</a>
+                    <a class="btn" rel="me noopener" target="_blank" href="https://linkedin.com/in/matthew-deltano/">LinkedIn</a>
+                    <a class="btn" href="mailto:mattdeltano@gmail.com">Email</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <div class="highlight">🚀 Built a production healthcare platform serving <strong>700+ users</strong></div>
+            <div class="highlight">☁️ AWS &middot; Node.js &middot; React Native &middot; MongoDB</div>
+            <div class="highlight">⚡ Published an algorithm with a <strong>~100&times; performance</strong> improvement</div>
+            <div class="highlight">🤖 Machine learning research with predictive modeling</div>
+            <div class="highlight">📱 Shipped software to both <strong>iOS and Android</strong></div>
+        </section>
+
         <article>
             <section class="body">
-                {{ post_macros::page_header(title=section.title) }}
                 {{ section.content | safe }}
             </section>
         </article>

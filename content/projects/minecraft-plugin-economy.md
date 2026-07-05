@@ -1,7 +1,7 @@
 +++
 title = "Minecraft Server Plugins — Economy & Warfare Systems"
 description = "Custom Java plugins for a public Minecraft server with 100+ active users. Built a dynamic in-game economy with demand-based pricing and stabilized an existing nation warfare system."
-weight = 3
+weight = 4
 date = 2026-03-01
 
 [extra]

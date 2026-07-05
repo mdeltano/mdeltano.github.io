@@ -1,7 +1,7 @@
 +++
 title = "Soccer Player Statistics — ML Goal Prediction"
 description = "Supervised regression pipeline predicting soccer player goal totals from a 2,688-row, 124-feature dataset. R² ≈ 0.80 on held-out data."
-weight = 4
+weight = 2
 date = 2023-04-01
 
 [extra]

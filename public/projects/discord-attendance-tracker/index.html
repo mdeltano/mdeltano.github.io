@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;mdeltano.github.io" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Discord Attendance Bot for Large Communities
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Discord Attendance Bot for Large Communities" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Discord bot that reads voice channel membership and logs attendance to a Google Sheet via batched API calls. Handles 100+ users per event across a 13-event weekly schedule." />
+        
+    
+
+    
+        
+            <meta name="description" content="Discord bot that reads voice channel membership and logs attendance to a Google Sheet via batched API calls. Handles 100+ users per event across a 13-event weekly schedule." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://mdeltano.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://mdeltano.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://mdeltano.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://mdeltano.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://mdeltano.github.io/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://mdeltano.github.io/custom.css" />
+        
+    
+
+    
+</head>
+
+
+    <body>
+        
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;mdeltano.github.io>Matthew Deltano</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;mdeltano" class="social">
+                    <img alt="GitHub"
+                         src="https://mdeltano.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;matthew-deltano&#x2F;" class="social">
+                    <img alt="LinkedIn"
+                         src="https://mdeltano.github.io/icons/social/linkedin.svg" />
+                </a>
+            
+                <a rel='me' href="mailto:mattdeltano@gmail.com" class="social">
+                    <img alt="Email"
+                         src="https://mdeltano.github.io/icons/social/email.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://mdeltano.github.io style="margin-right: 0.5em">Home</a>
+        
+            <a href=https://mdeltano.github.io/projects style="margin-right: 0.5em">Projects</a>
+        
+            <a href=https://mdeltano.github.io/why-i-build-software style="margin-right: 0.5em">Why I Build</a>
+        
+            <a href=https://mdeltano.github.io/Matthew_Deltano_Resume.pdf style="margin-right: 0.5em">Resume</a>
+        
+            <a href=https://mdeltano.github.io/contact style="margin-right: 0.5em">Contact Me</a>
+        
+
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://mdeltano.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://mdeltano.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Discord Attendance Bot for Large Communities
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2025-12-01</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <h2 id="overview">Overview</h2>
+<p>A Discord bot for a large community that needs a recurring, repeatable
+record of who showed up to scheduled voice-channel events. It scans the
+current state of designated voice channels, matches each user against a
+roster stored in a Google Sheet, and writes a "1" into the column
+corresponding to that event — turning what used to be manual roll call
+into a single slash command.</p>
+<p>The bot is built on <code>discord.js</code> v14 and the official Google Sheets
+API, and currently tracks attendance across 13 distinct weekly events.</p>
+<h2 id="what-i-built">What I built</h2>
+<ul>
+<li><strong><code>/attendance</code> slash command</strong> with autocomplete over the configured
+event list. Operators just type <code>/attendance</code> and pick the event;
+the bot does the rest.</li>
+<li><strong><code>/addevent</code>, <code>/removeevent</code>, <code>/renameevent</code></strong> — runtime
+configuration of the event-to-sheet-column mapping, so admins can
+add a new weekly event without touching the code or restarting from
+source. Adding an event automatically shifts every column to its
+right (including across the <code>Z → AA</code> boundary).</li>
+<li><strong><code>/dumpusers</code></strong> — diagnostic command that lists every user
+currently in the tracked voice channels who <em>isn't</em> in the
+spreadsheet roster. Catches the "new member joined but nobody added
+them to the sheet" case before it silently drops their attendance.</li>
+<li><strong>Permissioned execution.</strong> Every command checks that it was invoked
+from the approved channel ID before running, so the bot can live in
+a server without exposing admin actions to general users.</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<ul>
+<li><strong>Command auto-loader.</strong> <a rel="external" href="https://github.com/mdeltano/attendance_bot_js">index.js</a> walks the
+<code>commands/</code> directory at startup, registers each module's slash
+command with Discord via <code>deploy-commands.js</code>, and routes
+<code>InteractionCreate</code> events — both chat input and autocomplete — to
+the matching handler.</li>
+<li><strong>Event/column mapping</strong> lives in <a rel="external" href="https://github.com/mdeltano/attendance_bot_js">events.json</a>,
+a flat JSON file mapping human-readable event names ("Sunday KRA
+Linebattle") to sheet column letters ("V"). Keeping it as JSON means
+the <code>/addevent</code> command can rewrite it atomically and the next
+invocation picks up the new state.</li>
+<li><strong>Google Sheets integration</strong> uses a service account
+(<code>credentials.json</code>) and the <code>google-auth-library</code> to authenticate,
+then reads column D of the roster sheet to build a <code>user_id → row</code>
+lookup. Per-event attendance writes are accumulated into a single
+<code>spreadsheets.batchUpdate</code> call instead of one request per user —
+critical for staying under Sheets API rate limits when an event has
+100+ attendees.</li>
+<li><strong>Voice channel enumeration</strong> filters all guild channels by parent
+category ID and channel type, then fetches each channel's member
+cache to collect attendee user IDs in one pass.</li>
+<li><strong>Timeout hardening.</strong> Wraps the Sheets fetch in an <code>undici</code> agent
+with a 60-second connect timeout, since the default tripped
+intermittently against the Sheets API under load.</li>
+</ul>
+<h2 id="design-tradeoffs-worth-calling-out">Design tradeoffs worth calling out</h2>
+<ul>
+<li><strong>Column letter math.</strong> The <code>/addevent</code> command shifts every column
+to the right of the inserted one — including the <code>Z → AA</code> rollover —
+with hand-rolled charCode arithmetic. It's not glamorous code, but
+it lets admins reorder the event list without ever touching a Sheets
+URL or a config file.</li>
+<li><strong>Batched writes over per-user writes.</strong> The naive version sent one
+API call per attendee; under real load that hit quota errors and
+partial successes. Collecting all updates into one <code>batchUpdate</code>
+request fixed both reliability and latency.</li>
+<li><strong>Stateless command modules.</strong> Each command is a self-contained
+module exporting <code>data</code> and <code>execute</code>, which keeps the bot trivial
+to extend — adding a new command is a new file in <code>commands/utility/</code>
+and a restart, with no central dispatcher to update.</li>
+</ul>
+<h2 id="outcome">Outcome</h2>
+<p>Replaced a manual, per-event roll-call process with a single slash
+command. The bot reliably tracks attendance for 100+ users across 13
+recurring weekly events, with admin tooling that lets the community
+manage its own event schedule without developer involvement.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+        
+    </body>
+
+</html>

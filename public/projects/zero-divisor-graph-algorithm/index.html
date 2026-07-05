@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;mdeltano.github.io" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Zero-Divisor Graph Analysis Algorithm
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Zero-Divisor Graph Analysis Algorithm" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Custom Mathematica algorithm that delivered a ~100× speedup over prior approaches, enabling analysis of graphs with 1,000+ nodes. Contributed to a peer-reviewed publication in Graphs and Combinatorics." />
+        
+    
+
+    
+        
+            <meta name="description" content="Custom Mathematica algorithm that delivered a ~100× speedup over prior approaches, enabling analysis of graphs with 1,000+ nodes. Contributed to a peer-reviewed publication in Graphs and Combinatorics." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://mdeltano.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://mdeltano.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://mdeltano.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://mdeltano.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://mdeltano.github.io/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://mdeltano.github.io/custom.css" />
+        
+    
+
+    
+</head>
+
+
+    <body>
+        
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;mdeltano.github.io>Matthew Deltano</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;mdeltano" class="social">
+                    <img alt="GitHub"
+                         src="https://mdeltano.github.io/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;matthew-deltano&#x2F;" class="social">
+                    <img alt="LinkedIn"
+                         src="https://mdeltano.github.io/icons/social/linkedin.svg" />
+                </a>
+            
+                <a rel='me' href="mailto:mattdeltano@gmail.com" class="social">
+                    <img alt="Email"
+                         src="https://mdeltano.github.io/icons/social/email.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://mdeltano.github.io style="margin-right: 0.5em">Home</a>
+        
+            <a href=https://mdeltano.github.io/projects style="margin-right: 0.5em">Projects</a>
+        
+            <a href=https://mdeltano.github.io/why-i-build-software style="margin-right: 0.5em">Why I Build</a>
+        
+            <a href=https://mdeltano.github.io/Matthew_Deltano_Resume.pdf style="margin-right: 0.5em">Resume</a>
+        
+            <a href=https://mdeltano.github.io/contact style="margin-right: 0.5em">Contact Me</a>
+        
+
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://mdeltano.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://mdeltano.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Zero-Divisor Graph Analysis Algorithm
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2023-12-01</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <h2 id="overview">Overview</h2>
+<p>As a research assistant in Florida Polytechnic's computational
+mathematics group, I designed and implemented a single-threaded
+algorithm from scratch in Mathematica to analyze <strong>zero-divisor
+graphs</strong> — algebraic structures whose analysis had previously been done
+manually or with ad-hoc tooling, making large-scale study impractical.</p>
+<h2 id="my-role">My role</h2>
+<p>I owned the algorithm end-to-end: design, implementation,
+benchmarking, and the technical writeup that fed into a peer-reviewed
+publication.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>The core insight was combining <strong>targeted pruning logic</strong> (eliminating
+non-viable candidates before full evaluation) with <strong>early-exit
+brute-force checks</strong>, so most expensive comparisons never run. To keep
+memory bounded on large inputs, the algorithm stores only verified
+results rather than intermediate state — important when working with
+graphs at the 1,000+ node scale.</p>
+<p>Numerous mathematical edge cases (self-comparisons, degenerate graph
+structures) are handled by correctness checks embedded directly in the
+algorithmic flow rather than as a separate validation pass.</p>
+<h2 id="outcome">Outcome</h2>
+<ul>
+<li><strong>~100× performance improvement</strong> over prior approaches, reducing
+analyses that would have taken hundreds to thousands of times longer
+manually to tractable computational runtimes.</li>
+<li><strong>Adopted within the department</strong> for continued use in ongoing
+research.</li>
+<li><strong>Contributed to a peer-reviewed publication</strong> in <a rel="external" href="https://doi.org/10.1007/s00373-025-02944-3"><em>Graphs and
+Combinatorics</em></a>.</li>
+<li><strong>Presented</strong> methodology, tradeoffs, and performance results to an
+external academic audience of 5,000+ students and faculty.</li>
+</ul>
+<p>This project sharpened how I reason about algorithmic tradeoffs — speed
+vs. memory, generality vs. specialization — under real time
+constraints, and I can walk through the design decisions in depth.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+        
+    </body>
+
+</html>

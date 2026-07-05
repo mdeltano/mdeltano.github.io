@@ -1,7 +1,7 @@
 +++
 title = "Zero-Divisor Graph Analysis Algorithm"
 description = "Custom Mathematica algorithm that delivered a ~100× speedup over prior approaches, enabling analysis of graphs with 1,000+ nodes. Contributed to a peer-reviewed publication in Graphs and Combinatorics."
-weight = 2
+weight = 5
 date = 2023-12-01
 
 [extra]

@@ -9,9 +9,9 @@ full-stack applications, and cloud-based systems.
 Currently, I work at **Visitry LLC** on a healthcare scheduling
 platform deployed across iOS and Android, contributing to APIs,
 infrastructure, and application features that support real-world users.
-After serving on the project's university capstone team, I transitioned to
-a role as a consultant and now contribute across the stack to Visitry's existing 
-and upcoming platforms. 
+After serving on the project's university capstone team, I was retained as a
+software engineer and now contribute across the stack to Visitry's existing
+and upcoming platforms.
 
 My background includes Node.js, AWS, MongoDB, React Native, machine
 learning pipelines, and computational research. I enjoy solving complex
@@ -21,7 +21,7 @@ I've built, see the [**Projects**](/projects) page.
 
 ## Highlights
 
-- Software Engineering Consultant at Visitry LLC
+- Software Engineer at Visitry LLC
 - Sole capstone team member retained after graduation
 - Healthcare platform deployed on iOS & Android
 - Killam Fellowship recipient (Fulbright Canada)
